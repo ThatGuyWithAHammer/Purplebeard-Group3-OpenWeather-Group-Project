@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  </head>
+  <body>
+    <h1>Weather Forecast</h1>
+    <input type="text" id="location" placeholder="Enter a location" />
+    <button onclick="getForecast()">Get Forecast</button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="weather.css">
-  <title>Weather App</title>
-</head>
+    <div id="forecast"></div>
 
-<body>
-  <form id="userForm">
-    <input id="userSearch" type="text">
-    <p id="promptUser" class="hidden">Please type in a city</p>
-    <button type='submit'>Submit</button>
-  </form>
-  <div id='genInfo'>
-  </div>
-  <div id='tempInfo'>
-  </div>
-  <script src='app.js' defer></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
