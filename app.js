@@ -22,6 +22,8 @@ const getWeatherInfo = async (userinput) => {
   return data;
 };
 
+//This is code to select the api stuff
+
 // const displayWeather = (info) => {
 //   const city = info.city.name;
 //   const cityCode = info.city.country;
