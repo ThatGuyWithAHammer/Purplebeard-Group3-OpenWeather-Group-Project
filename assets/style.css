@@ -32,4 +32,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 150px;
+  background-color: #2c737f;
+  color: white;
 }
