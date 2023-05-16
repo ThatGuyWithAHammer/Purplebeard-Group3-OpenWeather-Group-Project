@@ -26,6 +26,7 @@ function getForecast() {
         });
         let temperature = Math.round(item.main.temp);
         let weatherDescription = item.weather[0].description;
+        let weatherIcon = item.weather[0].icon;
 
         // Create a div for each day's forecast
         let dayDiv = document.createElement("div");
@@ -34,6 +35,7 @@ function getForecast() {
             <h3>${dayOfWeek}</h3>
             <p>${dateString}</p>
             <p>${temperature}°C</p>
+            <img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="Weather icon">
             <p>${weatherDescription}</p>
           `;
 
@@ -45,3 +47,12 @@ function getForecast() {
       console.log(error);
     });
 }
+
+// Listen for keyup event on the search input field
+document.getElementById("location").addEventListener("keyup", function(event) {
+  // Check if the Enter key was pressed
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent form submission
+    getForecast(); // Call the getForecast function
+  }
+});
